@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.5.7'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+description = 'LuceneDemo'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+    
+    // For JSON processing
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    
+    // For API documentation
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
+}
+
+test {
+    useJUnitPlatform()
+    
+    dependencies {
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+        testImplementation 'org.mockito:mockito-core:4.8.0'
+        testImplementation 'org.mockito:mockito-junit-jupiter:4.8.0'
+        testImplementation 'org.mockito:mockito-inline:4.8.0'
+        testImplementation 'io.projectreactor:reactor-test'
+        
+        // Exclude JUnit 4 and legacy JUnit Vintage
+        testImplementation('org.springframework.boot:spring-boot-starter-test') {
+            exclude group: 'junit', module: 'junit'
+            exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+        }
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

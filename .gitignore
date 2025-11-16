@@ -1,0 +1,132 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+.gitattributes
+Compilation
+
+# Lucene index directories
+lucene-index/
+index/
+*.cfs
+*.cfe
+*.si
+*.lock
+_*
+segments_*
+write.lock
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+logs/
+*.log
+
+# Local development environment files
+.env
+.env.local
+.env.*.local
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE specific files (additional)
+.idea_modules/
+*.sublime-workspace
+*.sublime-project
+
+# Build output (additional)
+out/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Gradle (additional)
+.gradletasknamecache
+
+# Application properties with sensitive data
+application-*.properties
+!application.properties
+!application-example.properties
+
+# Lucene temporary files
+*.tmp
+*.temp
+
+# HSQL database files
+*.log
+*.lck
+*.script
+*.properties
+*.data
+
+# Lucene test indexes
+test-output/
+
+# IntelliJ IDEA run configurations
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code settings
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Mac OS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux specific
+*~
+
+# Project specific
+lucene-demo-*.jar
