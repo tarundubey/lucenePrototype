@@ -1,3 +1,5 @@
+> **Before we dive in**, check out my previous article on the [Theoretical Explanation of Lucene Concepts](https://medium.com/@tarunkumardubey6793/lucene-explained-simply-the-core-technology-behind-modern-search-engines-a9a7f49b57ee) for a solid foundation on the core concepts we'll be implementing.
+
 # Lucene-like Search Library
 
 A lightweight, Java-based search library inspired by Apache Lucene, providing core search functionality with a simple API.
